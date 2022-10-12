@@ -33,4 +33,22 @@ public class Students1Repsitory {
 
     return students;
   }
+
+  public Students1 getStudent(int id){
+
+    try {
+      PreparedStatement pstp = con.prepareStatement("Select * From kea.student1");
+      pstp.setInt(id, id);
+      pstp.setString(id, "");
+      ResultSet resultSet1 = pstp.executeQuery();
+
+
+    }
+    catch (SQLException e){
+      e.printStackTrace();
+    }
+
+
+    return null;
+  }
 }
